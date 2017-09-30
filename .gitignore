@@ -1,2 +1,4 @@
 PathMax/Include
 PathMax/Lib
+*.pyc
+*~

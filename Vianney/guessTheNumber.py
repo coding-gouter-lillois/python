@@ -5,7 +5,7 @@ import random
 number = random.randint(1, 10)
 print(number)
 
-#???
+#Variable du nombre d'essais
 tries = 1
 
 #Demande du nom du joueur

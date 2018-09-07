@@ -31,9 +31,10 @@ while 1:
     if guess == number:
         print("Well done!")
         print("You found in", tries, "tries!")
+        break
     else:
         tries = tries + 1
-        if guess >= number:
-            int(input("Guess lower :"))
-        else:
+        if guess < number:
+            int(input("Guess lower :"))    
+        if guess < number:
             int(input("Guess highter :"))

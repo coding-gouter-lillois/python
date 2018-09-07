@@ -26,13 +26,13 @@ if question == "y":
     print("I'm thinking of a number between 1 and 10")
     guess = int(input("Have a guess :"))
 
-#Boucle infinie qui teste la réponse donnée par le joueur
+#Boucle infinie
 while 1:
-    if guess == number:
+    if guess == number: #Si le nombre donné par le joueur est le bon
         print("Well done!")
         print("You found in", tries, "tries!")
         break
-    else:
+    else: #Sinon ; on ajoute 1 au nombre d'essais, et on donne une indication pour faciliter la recherche du joueur
         tries = tries + 1
         if guess < number:
             int(input("Guess lower :"))    

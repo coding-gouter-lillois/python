@@ -1,9 +1,6 @@
 #Importation du fichier qui permet d'avoir des nombres aléatoirs
 import random
 
-#Variable du nombre d'essais
-tries = 1
-
 #Demande du nom du joueur
 username = input("Hello, what's your name?")
 
@@ -20,8 +17,12 @@ if question == "y":
     while 1:
         #La variable 'number' obtient une valeur comprise entre 1 & 10
         number = random.randint(1, 10)
+
+        #Variable du nombre d'essais
+        tries = 1
+        
         #Annonce du début du jeu
-        print("I'm thinking of a number between 1 and 10")
+        print("\nI'm thinking of a number between 1 and 10")
         guess = int(input("Have a guess :"))
 
         #Boucle infinie
@@ -32,5 +33,11 @@ if question == "y":
             if guess > number:
                 guess = int(input("Guess lower :"))
         else:
-            print("Well done!")
-
+            print("Well done", username, "!")
+            if tries == 1:
+                print("Wow... How lucky you are!")
+            else:
+                if tries < 5:
+                    print("Nice! You won in", tries, "tries!\n\n\n")
+                if tries > 5:
+                    print("Well... You'll better do than", tries, "next time!\n\n\n")

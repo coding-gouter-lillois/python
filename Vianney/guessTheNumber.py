@@ -16,25 +16,20 @@ print("Hello", username + ".")
 
 #Demande au joueur si il veut jouer (J'espère que oui, c'est le but du programme ^^")
 question = input("Do you want to play a game? [Y/N]")
-
-#Si la réponse est 'n' (No)
 if question == "n":
-    print("Oh... Ok ;(")
-
-#Si la réponse est 'y' (Yes)
-if question == "y":
-    print("I'm thinking of a number between 1 and 10")
-    guess = int(input("Have a guess :"))
+	print("Oh... Ok ;(")
+else:
+	while 1:
+		print("I'm thinking of a number between 1 and 10")
+		guess = int(input("Have a guess :"))
 
 #Boucle infinie
-while 1:
-    if guess == number: #Si le nombre donné par le joueur est le bon
-        print("Well done!")
-        print("You found in", tries, "tries!")
-        break
-    else: #Sinon ; on ajoute 1 au nombre d'essais, et on donne une indication pour faciliter la recherche du joueur
-        tries = tries + 1
-        if guess < number:
-            int(input("Guess lower :"))    
-        if guess < number:
-            int(input("Guess highter :"))
+	while guess != number:
+		tries = tries + 1
+		if guess < number:
+			guess = int(input("Guess highter :"))
+		if guess > number:
+			guess = int(input("Guess lower :"))
+	else:
+		print("Well done")
+

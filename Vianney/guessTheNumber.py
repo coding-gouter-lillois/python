@@ -3,7 +3,6 @@ import random
 
 #La variable 'number' obtient une valeur comprise entre 1 & 10
 number = random.randint(1, 10)
-print(number)
 
 #Variable du nombre d'essais
 tries = 1
